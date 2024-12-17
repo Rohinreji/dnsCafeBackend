@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb://localhost:27017/?appName=MongoDB+Compass&directConnection=true&serverSelectionTimeoutMS=2000",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
+  "mongodb+srv://rohinreji65:8sZrpY8R7UjWQJC0@cluster0.k2cgb.mongodb.net/"
 );
 var db = mongoose.connection;
 db.on("error", console.error.bind("error"));
