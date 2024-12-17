@@ -1,5 +1,11 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://127.0.0.1/cafe");
+mongoose.connect(
+  "mongodb://localhost:27017/?appName=MongoDB+Compass&directConnection=true&serverSelectionTimeoutMS=2000",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 var db = mongoose.connection;
 db.on("error", console.error.bind("error"));
 db.once("open", () => {
